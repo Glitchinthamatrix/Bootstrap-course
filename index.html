@@ -36,11 +36,88 @@
                         <a href="contactus.html" class="nav-link"><span class="fa fa-address-card"></span> Contact</a>
                     </li>
                 </ul>
+                <span class="ml-auto navbar-text">
+                    <a data-toggle="modal" data-target="#reservemodal"><button class="btn btn-success">Reserve a place</button></a>
+                </span>
+                <span class="ml-4 navbar-text">
+                    <a data-toggle="modal" data-target="#loginmodal"><span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+    <div role="dialog" class="modal fade" id="reservemodal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-transparent">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="text-dark">Reserve a place</h4>
+                        <button class="close" data-dismiss="modal" type="button"><span class="fa fa-close"></span></button>
+                    </div>
+                    <div class="modal-body container text-dark">
+                        <div class="row mb-2 justify-content-center">
+                            <h5 class="col-4 pt-1">Date</h5>
+                            <input class=" form-control col-8" type="date">
+                        </div>
+                        <div class="row mb-3">
+                            <h5 class="mt-1  col-4">
+                                Time
+                            </h5>
+                            <input type="time" class="form-control col-8">
+                        </div>
+                        <div class="row mb-3">
+                            <h5 class="col-6">Number of guests</h5>
+                            <ul class=" col-6 list-unstyled">
+                                <input class="mr-1 d-inline" type="radio" name="gender" value="male">
+                                <label class="mr-3 " for="male">1</label>
+                                <input class="mr-1 d-inline" type="radio" name="gender" value="female">
+                                <label class="mr-3 " for="female">2</label>
+                                <input class="mr-1 d-inline" type="radio" name="gender" value="other">
+                                <label class="mr-3 " for="other">3</label>
+
+                            </ul>
+                        </div>
+
+                        <div class="row">
+                            <button class="ml-2 col-6 mr-3 btn btn-success ">Non-smoking section</button>
+                            <button class="mr-2 col-5 btn btn-danger mr03">Smoking section</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn mt-3 btn-success">
+                               Reserve
+                </button>
+
+            </div>
+        </div>
+    </div>
 
 
+    <div role="dialog" class=" text-dark modal fade" id="loginmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Login</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span class="fa fa-xs fa-close"></span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <input class="col-12" type="text" placeholder="Enter e-mail">
+                        </div>
+                        <div class="row mb-3">
+                            <input class="col-12" type="text" placeholder="Enter password">
+                        </div>
+                        <div class="row">
+                            <div class="ml-auto">
+                                <button class="btn btn-success">Sign-in</button>
+                                <button class="btn btn-danger">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <header style="background-color:black;" class=" jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -54,7 +131,7 @@
                     <img src="img/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-sm-3 col-12 align-items-center d-flex ">
-                    <button style="padding-left: 40px; padding-right: 40px; background-color: #403511; color:white; padding-bottom: 10px;" onclick="book()" class="btn">Reserve a place</button>
+                    <button style="padding-left: 40px; padding-right: 40px; background-color: #403511; color:white; padding-bottom: 10px;" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Or call us at <br > 6786866767" onclick="book()" class="btn">Reserve a place</button>
                 </div>
             </div>
         </div>
@@ -70,8 +147,63 @@
         </div>
     </div>
 
-    <div class="container align-items-center">
-        <div id="Here" class="row mt-5 mb-5 align-items-center">
+    <div class="mt-3 container align-items-center">
+        <div class="row">
+            <div class="col">
+                <div id="carousel" class="slide carousel carousel-slide" data-ride="carousel">
+                    <div class="csarousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/uthappizza.png" alt="">
+                            <div class=" carousel-caption d-none d-md-block" id="carouseltext1">
+                                <h2>Uthappizza <span class="badge badge-danger mr-2">HOT</span><span class="badge badge-pill badge-secondary">$12</span></h2>
+                                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block img-fluid" src="img/buffet.png" alt="">
+                            <div id="carouseltext2" class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span>
+                                </h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block img-fluid" src="img/alberto.png" alt="">
+                            <div id="carouseltext3" class="carousel-caption d-none d-md-block">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel control-prev-icon"><span class="fa fa-arrow-left"></span></span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel  control-next-icon"><span class="fa fa-arrow-right"></span></span>
+                    </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                           <span class="fa fa-pause"></span>
+                       </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                        <span class="fa fa-play"></span>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5 mb-5 align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations </h3>
             </div>
@@ -137,11 +269,15 @@
                         <dlv class="row text-dark">
                             <dt class="col-6">Number of guests</dt>
                             <dd class="col-6">
+
                                 <ul class="list-unstyled">
-                                    <li class="d-inline mr-4"><input id="1guest" class="mr-1" type="radio"><label for="1guest">1</label></li>
-                                    <li class="d-inline mr-4"><input id="2guests" type="radio"> <label for="2guests">2</label></li>
-                                    <li class="d-inline mr-4"><input id="3guests" type="radio"> <label for="3guests">3</label></li>
-                                    <li class="d-inline"><input id="4guests" type="radio"> <label for="4guests">4</label></li>
+                                    <input class=" mr-1 d-inline" type="radio" name="gender" value="male">
+                                    <label class="mr-5 " for="male">1</label>
+                                    <input class="mr-1 d-inline" type="radio" name="gender" value="female">
+                                    <label class="mr-5 " for="female">2</label>
+                                    <input class="mr-1 d-inline" type="radio" id="other" name="gender" value="other">
+                                    <label class="mr-5 " for="other">3</label>
+
                                 </ul>
                             </dd>
                             <dt class="col-6">Date</dt>
@@ -203,6 +339,63 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-<script src="index.js"></script>
+<style>
+    .carousel {
+        background-color: #403511;
+    }
+    
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 300px;
+    }
+    
+    #carouseltext1 {
+        padding-left: 250px;
+        padding-bottom: 50px;
+    }
+    
+    #carouseltext2 {
+        padding-left: 250px;
+        padding-bottom: 50px;
+    }
+    
+    #carouseltext3 {
+        padding-left: 250px;
+        padding-bottom: 50px;
+    }
+    
+    #carouselButton {
+        right: 0;
+        position: absolute;
+        bottom: 0;
+    }
+</style>
+<script>
+    function book() {
+        var book = document.getElementById("booking");
+        book.scrollIntoView(false);
+    };
+
+    $(document).ready(function() {
+        $('[data-toggle=tooltip]').tooltip();
+    });
+    $(document).ready(function() {
+        $("#carousel").carousel({
+            interval: 2000
+        })
+        $("#carousel-pause").click(function() {
+            $("#carousel").carousel('pause');
+        })
+        $("#carousel-play").click(function() {
+            $("#carousel").carousel('cycle');
+        })
+    })
+</script>
 
 </html>
